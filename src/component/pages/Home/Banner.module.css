@@ -1,0 +1,94 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0rem;
+  justify-content: center;
+  height: 100%;
+  gap: 6rem;
+}
+.bannerImage{
+  padding: calc(var(--nav-height, 6rem) + 4rem) 4rem 4rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.bannerHeading {
+  font-weight: 900;
+  font-size: 6rem;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(90deg, #44c0d7 22.5%, #c34efb 54%, #50f45c 93%);
+  background-clip: text;
+  color: transparent;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 2.2rem;
+}
+.bannerPera {
+  text-align: center;
+  padding: 0rem auto 2.8rem auto;
+  line-height: 3rem;
+  font-size: 2.1rem;
+  margin-bottom: 2rem;
+}
+
+.KnowBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  color: #fff !important;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  border: 0.1rem solid #fbfbfb;
+  text-decoration: none;
+  transition: 0.4s ease;
+  display: inline-block;
+}
+
+.bannerImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+@media (max-width:900px) and (min-width:600px) {
+  .bannerPera {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bannerImage{
+   
+      padding: 10rem 0.8rem 1rem;
+      height: fit-content;
+  
+}
+  
+
+  .bannerHeading{
+    font-weight: 800;
+    font-size: 2.5rem;
+  }
+
+  .bannerPera{
+    text-align: center;
+    padding: 0px auto 2.8rem auto;
+    line-height:2.1rem;
+    font-size: 1.7rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .bannerTopServices{
+    display: block;
+  }
+
+}

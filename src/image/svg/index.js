@@ -1,0 +1,5 @@
+export { default as Startup} from './startup.png'
+export{ default as gst} from './gst.png'
+export {default as seedFunding} from './seedFunding.png'
+export {default as tax} from './tax.png'
+export {default as trademark} from './trademark.png'

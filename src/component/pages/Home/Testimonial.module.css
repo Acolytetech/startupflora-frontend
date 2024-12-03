@@ -1,0 +1,226 @@
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind other elements */
+}
+.testimonial {
+  position: relative;
+  display: flex;
+  /* height: 100vh; */
+}
+.testimonial::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  column-gap: 6rem;
+  z-index: 1;
+}
+.mainImage {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  padding: 2rem 0;
+  justify-content: center;
+
+}
+.mainImage .heading {
+  font-size: 5.8rem;
+  font-weight: 900;
+  line-height: 6.656000000000001rem;
+  color: white;
+}
+.mainImage .subheading {
+  font-size: 2.4rem;
+  line-height: 3.0260000000000002rem;
+  color: white;
+  font-weight: 300;
+}
+
+.benefitsList {
+  font-size: 2rem;
+  line-height: 4.5rem;
+  color: white;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+.benefitTitle {
+  font-weight: 800;
+}
+
+.swiper {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.swiperContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  background: rgb(255 255 255 / 15%);
+  backdrop-filter: blur(1rem);
+  border: 1px solid white;
+  padding: 1rem;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  height: auto !important;
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+}
+
+.cardImage {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.cardText {
+  flex: 1;
+}
+
+.cardText h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.392rem;
+  margin: 0;
+}
+
+.cardText .role {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #666;
+  margin: 0.2rem 0;
+}
+
+.quote {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 900;
+  margin: 0.5rem 0;
+}
+
+.details {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #444;
+}
+
+@media (max-width:900px) and (min-width:600px){
+  .container{
+    padding: 1.2rem 3.6rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonial {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+
+  .mainImage {
+    
+      /* text-align: center; */
+      padding: 1rem;
+      text-align: left;
+      gap: 1rem;
+  
+  }
+
+  .mainImage .heading {
+    font-size: 2.6rem;
+    line-height: 4.2rem;
+  }
+
+  .mainImage .subheading {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .benefitsList {
+    font-size: 1.5rem;
+    /* font-weight: 900; */
+    line-height: 2.5rem;
+  }
+
+  .swiper {
+    position: static;
+    margin-top: 1rem;
+    height: auto;
+  }
+
+  .swiperContainer {
+    height:19.8rem;
+  }
+
+  .card {
+    background: #f0ededd6; /* Black background with transparency */
+    backdrop-filter: blur(1rem);
+    border: 1px solid white;
+    padding: 1rem;
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    height: auto !important;
+  }
+
+  .cardContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardImage {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cardText h4 {
+    font-size: 2rem;
+  }
+
+  .cardText .role {
+    font-size: 1.2rem;
+  }
+
+  .quote {
+    font-size: 1.3rem;
+  }
+
+  .details {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
