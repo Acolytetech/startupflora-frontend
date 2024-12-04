@@ -7,7 +7,7 @@ export default function Banner({ navRef }) {
   const [heroData, setHeroData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const navHeight = navRef.current?.clientHeight || 80;
+  // const navHeight = navRef.current?.clientHeight || 80;
 
   useEffect(() => {
     const fetchHeroData = async () => {

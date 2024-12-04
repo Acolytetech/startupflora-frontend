@@ -12,11 +12,11 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 const Footer = () => {
   const [footerData, setFooterData] = useState(null);
   const [error, setError] = useState(false);
-  const [showSections, setShowSections] = useState({ // Sections visibility के लिए state
-    quickLinks: false,
-    contactUs: false,
-    followUs: false,
-  });
+  // const [showSections, setShowSections] = useState({ // Sections visibility के लिए state
+    // quickLinks: false,
+    // contactUs: false,
+    // followUs: false,
+  // });
   const [activeSection, setActiveSection] = useState(null);
 
 
@@ -36,8 +36,8 @@ const Footer = () => {
       .then((data) => setFooterData(data))
             .catch(() => setError(true));
     
-console.log(error)
   }, []);
+  console.log(error)
 
   if (!footerData) return <div>Loading...</div>;
 

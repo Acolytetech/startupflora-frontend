@@ -359,8 +359,8 @@
   }
   .dropdown-menu {
     text-decoration: none;
-    position: a;
-    top: 20%;
+    position: absolute;
+    top: 30%;
     left: 40%;
     transform: translateX(-50%);
     list-style: none;
@@ -383,7 +383,7 @@
     display: grid;
     grid-gap: 2rem;
     padding-top: 5rem;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(3, 15rem);
     grid-template-rows: repeat(1,auto);
     background: linear-gradient(
       0deg,
@@ -396,6 +396,8 @@
  
   /* Startup India Dropdown */
   .dropdown-menu.startup-india {
+    top: 10% !important;
+    left: 40%;
     background: linear-gradient(
       0deg,
       rgba(251, 248, 248, 1) 0%,
@@ -404,7 +406,7 @@
     ) !important;
     color: #ffffff;
     font-size: 1.2rem;
-    grid-template-columns: repeat(1, 27rem) !important;
+    grid-template-columns: repeat(2,20rem) !important;
     grid-template-rows: repeat(1, auto) !important;
     /* gap:20px; */
     margin-top: 2rem;
