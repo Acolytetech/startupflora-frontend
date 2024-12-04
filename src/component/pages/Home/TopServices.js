@@ -4,38 +4,6 @@ import style from "./TopServices.module.css";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import  createClient  from "../../../Client";
 
-// const topservices = [
-//   {
-//     name: "Seed Funding Consulting",
-//     image: seedFunding,
-//     href: "https://www.startupflora.com/seed-funding-consultancy",
-//   },
-//   {
-//     name: "Startup India Registration",
-//     image: Startup,
-//     href: "https://www.startupflora.com/startup-india-registration",
-//   },
-//   {
-//     name: "Trademark Registration",
-//     image: trademark,
-//     href: "https://www.startupflora.com/trademark-registration",
-//   },
-//   {
-//     name: "Startup India Tax Exemption",
-//     image: tax,
-//     href: "https://www.startupflora.com/startup-india-tax-exemption",
-//   },
-//   {
-//     name: "GST Input Tax Credit",
-//     image: gst,
-//     href: "https://www.startupflora.com/gst-registration",
-//   },
-// ];
-
-
-
-
-
 
 const TopServices = () => {
 
@@ -79,7 +47,7 @@ const TopServices = () => {
     <div className={style.carouselContainer}>
       <h2>Our Top Services</h2>
 
-      <div className={style.gridContainer}>
+      <div className={style.gridContainer}  data-aos="zoom-in">
         {topservices.map((testimonial, index) => (
           <a
             key={index}

@@ -7,7 +7,7 @@ import styles from "./Testimonial.module.css";
 import video from "../../../image/video/Video.mp4";
 import createClient from "../../../Client";
 import { PortableText } from "@portabletext/react";
- 
+
 function Testimonial({ navRef }) {
   const navHeight = navRef.current?.clientHeight || 80;
   const [testimonialContentData, setTestimonialContentData] = useState([]);
@@ -15,7 +15,7 @@ function Testimonial({ navRef }) {
   const [contentLoading, setContentLoading] = useState(true);
   const [sliderLoading, setSliderLoading] = useState(true);
   const [error, setError] = useState(null);
- 
+
   useEffect(() => {
     const fetchTestimonialContentData = async () => {
       try {
@@ -35,10 +35,10 @@ function Testimonial({ navRef }) {
         setContentLoading(false);
       }
     };
- 
+
     fetchTestimonialContentData();
   }, []);
- 
+
   useEffect(() => {
     const fetchTestimonialsliderData = async () => {
       try {
@@ -56,7 +56,6 @@ function Testimonial({ navRef }) {
             description,
             publishedAt
           }`
-         
         );
         setTestimonialsliderData(data);
         setSliderLoading(false);
@@ -66,20 +65,20 @@ function Testimonial({ navRef }) {
         setSliderLoading(false);
       }
     };
- 
+
     fetchTestimonialsliderData();
   }, []);
- 
+
   if (contentLoading || sliderLoading) {
     return <div className={styles.loading}>Loading...</div>;
   }
- 
+
   if (error) {
     return <div className={styles.error}>{error}</div>;
   }
- 
+
   const content = testimonialContentData[0];
- 
+
   return (
     <section
       style={{ height: `calc(90vh - ${navHeight}px)` }}
@@ -92,25 +91,18 @@ function Testimonial({ navRef }) {
         muted
         loop
       ></video>
- 
+
       <div className={styles.container}>
         <div className={styles.mainImage}>
-          <h3 className={styles.heading}>{content.headline}</h3>
-          <p className={styles.subheading}>
+          <h3 className={styles.heading} data-aos="fade-right">{content.headline}</h3>
+          <p className={styles.subheading} data-aos="fade-right">
             {content.subheading || "Because Your Startup Deserves the Best Start"}
           </p>
-          <p className={styles.benefitsList}>
-          <PortableText value={content.description || []} />
- 
+          <p className={styles.benefitsList} data-aos="fade-right">
+            <PortableText value={content.description || []} />
           </p>
- 
-          {/* <ul className={styles.benefitsList}>
-            {content.description?.map((point, index) => (
-              <li key={index}>{point}</li>
-            ))}
-          </ul> */}
         </div>
- 
+
         <div
           style={{
             width: "300px",
@@ -120,39 +112,34 @@ function Testimonial({ navRef }) {
         >
           <div className={styles.swiper}>
             <Swiper
+              data-aos="zoom-in"
               direction="vertical"
-              // slidesPerView={4}
-              spaceBetween={10}
               loop={true}
-              speed={10888}
+              speed={5000} // You can adjust this based on the desired scroll speed
               autoplay={{
-                delay: 0,
+                delay: 0, // Adjust the delay to match the slide speed
+                disableOnInteraction: false,
               }}
               modules={[Navigation, Autoplay]}
               className={styles.swiperContainer}
               breakpoints={{
-                // when window width is >= 320px
-                320: {
-                  slidesPerView: 1, // For mobile, show 1 slide
+                320: { 
+                  slidesPerView: 1,
                   spaceBetween: 10,
                 },
-                // when window width is >= 480px
                 480: {
-                  slidesPerView: 2, // Show 2 slides
+                  slidesPerView: 2,
                   spaceBetween: 10,
                 },
-                // when window width is >= 768px
                 768: {
-                  slidesPerView: 3, // Show 3 slides
+                  slidesPerView: 3,
                   spaceBetween: 20,
                 },
-                // when window width is >= 1024px
                 1024: {
-                  slidesPerView: 4, // Show 4 slides
+                  slidesPerView: 4,
                   spaceBetween: 30,
                 },
               }}
-
             >
               {testimonialsliderData.map((testimonial) => (
                 <SwiperSlide key={testimonial.slug.current} className={styles.card}>
@@ -167,12 +154,13 @@ function Testimonial({ navRef }) {
                       <p className={styles.role}>{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className={styles.quote}>"{testimonial.text}"</p>
-                  <p
-                    className={styles.details}
-                    // dangerouslySetInnerHTML={{__html:testimonial.description }}
-                  >
-                  <span dangerouslySetInnerHTML={{__html: testimonial.description}}></span>
+                  <p className={styles.quote}>{testimonial.text}</p>
+                  <p className={styles.details}>
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: testimonial.description,
+                      }}
+                    ></span>
                   </p>
                 </SwiperSlide>
               ))}
@@ -183,5 +171,5 @@ function Testimonial({ navRef }) {
     </section>
   );
 }
- 
+
 export default Testimonial;

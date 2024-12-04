@@ -69,9 +69,9 @@ export default function Banner({ navRef }) {
         >
           <div className={styles.banner} key={item.slug.current}>
             {/* Overlay Content */}
-            <div className={styles.container}>
-              <h2 className={styles.bannerHeading}>{item.headline}</h2>
-              <p className={styles.bannerPera} dangerouslySetInnerHTML={{__html: item.subheadline}}>
+            <div className={styles.container} >
+              <h2 className={styles.bannerHeading} data-aos="fade-right">{item.headline}</h2>
+              <p className={styles.bannerPera} dangerouslySetInnerHTML={{__html: item.subheadline}}data-aos="fade-left">
               </p>
               {item.ctaButton?.link && item.ctaButton?.label && (
                 <a
