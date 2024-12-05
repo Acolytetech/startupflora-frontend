@@ -68,8 +68,8 @@
 }
 
 .gridCard:hover:before {
-  width: 40rem;
-  height: 40rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
 }
 
