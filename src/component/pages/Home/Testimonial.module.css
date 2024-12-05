@@ -115,6 +115,8 @@
 
 .cardText {
   flex: 1;
+  text-transform: capitalize;
+
 }
 
 .cardText h4 {

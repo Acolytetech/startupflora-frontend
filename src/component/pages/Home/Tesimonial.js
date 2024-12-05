@@ -115,7 +115,7 @@ function Testimonial({ navRef }) {
               data-aos="zoom-in"
               direction="vertical"
               loop={true}
-              speed={5000} // You can adjust this based on the desired scroll speed
+              speed={3000} // You can adjust this based on the desired scroll speed
               autoplay={{
                 delay: 0, // Adjust the delay to match the slide speed
                 disableOnInteraction: false,
