@@ -329,8 +329,9 @@
     top: 100%;
     right: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9) !important;
     padding: 2rem;
+    color: #000000 !important;
   }
  
   .navlinks.open {
@@ -351,6 +352,7 @@
  
   .nav-item {
     margin: 1.5rem 0;
+    color: #000000;
   }
  
   .btn-grad {
@@ -360,7 +362,7 @@
   .dropdown-menu {
     /* transform: translateX(-100%); */
     text-decoration: none;
-    position: absolute;
+    position:fixed;
     top: 30%;
     left: 0%;
     transform: translateX(100%);
@@ -373,11 +375,11 @@
     border-radius: 0.4rem;
     /* display: none; */
     z-index: 100;
-    background: linear-gradient(
+    /* background: linear-gradient(
       0deg rgba(251, 248, 248, 1) 0%,
       rgba(251, 248, 248, 2) 80%,
       rgba(255, 255, 255, 0) 100%
-    );
+    ); */
     scale: 0.8;
     /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
   }
@@ -387,7 +389,7 @@
     display: grid;
     grid-gap: 2rem;
     padding-top: 5rem;
-    grid-template-columns: repeat(3, 11rem);
+    grid-template-columns: repeat(3, 10rem);
     grid-template-rows: repeat(1,auto);
     background: linear-gradient(
       0deg,
@@ -395,6 +397,7 @@
       rgba(251, 248, 248, 2) 95%,
       rgba(255, 255, 255, 0) 100%
     ) !important;
+    color: #000000;
     overflow: scroll;
     transform: translateX(-3%);
     transition: all 11s ease-in-out;
@@ -404,7 +407,7 @@
  
   /* Startup India Dropdown */
   .dropdown-menu.startup-india {
-    top: 10% !important;
+    top: 30% !important;
     left: 0%;
     background: linear-gradient(
       0deg,
@@ -412,7 +415,7 @@
       rgba(251, 248, 248, 2) 80%,
       rgba(255, 255, 255, 0) 100%
     ) !important;
-    color: #ffffff;
+    color: #000000 !important;
     font-size: 1.2rem;
     grid-template-columns: repeat(2,17rem) !important;
     grid-template-rows: repeat(1, auto) !important;
@@ -421,7 +424,7 @@
   }
  
   .dropdown-menu.startup-india .dropdown-link {
-    color: #000000;
+    color: #000000 !important;
     text-decoration: none;
     font-size: 1rem;
     padding: 1rem 0rem;
@@ -440,7 +443,7 @@
   /* Service Dropdown */
   .dropdown-link {
     font-size: 1.2rem;
-    color: black;
+    color: black !important;
     font-weight: bold;
     text-decoration: none;
   }
@@ -448,7 +451,7 @@
     text-decoration: none;
     font-size: 1rem;
     margin-top: 1rem;
-    color: black;
+    color: black !important;
     padding: 1rem 0px !important;
     transition: all 0.5s ease-in-out;
   }
