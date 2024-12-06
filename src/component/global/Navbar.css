@@ -170,7 +170,7 @@
   text-decoration: none;
   position: absolute;
   top: 10%;
-  left: 50%;
+  left: 42%;
   transform: translateX(-50%);
   list-style: none;
   padding: 3rem;
@@ -192,8 +192,8 @@
   display: grid;
   grid-gap: 2rem;
   padding-top: 5rem;
-  grid-template-columns: repeat(5, 21rem);
-  grid-template-rows: repeat(2, 45rem 5rem);
+  grid-template-columns: repeat(8, 20rem);
+  grid-template-rows: repeat(2,fit-content);
   background: linear-gradient(0deg,
       rgba(251, 248, 248, 1) 0%,
       rgba(251, 248, 248, 1) 95%,
@@ -201,20 +201,20 @@
 }
 
 /* Startup India Dropdown */
-.dropdown-menu.startup-india {
+ul .startup-india-▼{
   background: linear-gradient(0deg,
       rgba(251, 248, 248, 1) 0%,
       rgba(251, 248, 248, 2) 80%,
       rgba(255, 255, 255, 0) 100%) !important;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   grid-template-columns: repeat(3, 27rem) !important;
   grid-template-rows: repeat(3, auto) !important;
   /* gap:20px; */
   margin-top: 2rem;
 }
 
-.dropdown-menu.startup-india .dropdown-link {
+ul .startup-india-▼ .dropdown-link {
   color: #000000;
   text-decoration: none;
   font-size: 1.7rem;
@@ -222,7 +222,7 @@
   font-weight: normal !important;
 }
 
-.dropdown-menu.startup-india .dropdown-link:hover {
+ul .startup-india-▼ .dropdown-link:hover {
   color: #0c0ce7;
   padding-left: 0.3rem !important;
   /* scale: 1.05 !important; */
@@ -420,7 +420,7 @@
   }
 
   /* Startup India Dropdown */
-  .dropdown-menu.startup-india {
+  ul .startup-india-▼  {
     max-height: 80vh !important;
 
     top: 11% !important;
