@@ -96,10 +96,31 @@ const Navbar = ({ navRef }) => {
     );
   };
 
-  // Toggle mobile menu
+  // Toggle mobile menu and disable/enable scrolling
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    if (!isMenuOpen) {
+      // Disable body scrolling when the menu is open
+      document.body.style.overflow = "hidden";
+    } else {
+      // Enable body scrolling when the menu is closed
+      document.body.style.overflow = "auto";
+    }
   };
+
+  // Apply/remove the no-scroll class based on menu state
+  // useEffect(() => {
+  //   if (isMenuOpen) {
+  //     document.body.classList.add('no-scroll');
+  //   } else {
+  //     document.body.classList.remove('no-scroll');
+  //   }
+
+  //   return () => {
+  //     // Clean up when the component is unmounted or when the menu closes
+  //     document.body.classList.remove('no-scroll');
+  //   };
+  // }, [isMenuOpen]);
 
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} ref={navRef}>
