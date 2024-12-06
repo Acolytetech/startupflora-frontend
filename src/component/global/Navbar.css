@@ -320,6 +320,7 @@
 @media only screen and (max-width: 768px) {
   .navbar {
     padding: 2rem 2rem;
+    
   }
  
   .navlinks {
@@ -329,7 +330,8 @@
     top: 100%;
     right: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9) !important;
+    height: 100vh;
+    background: rgba(0, 0, 0, 1) !important;
     padding: 2rem;
     color: #000000 !important;
   }
@@ -372,8 +374,8 @@
   .dropdown-menu {
     /* transform: translateX(-100%); */
     text-decoration: none;
-    position:fixed;
-    top: 30%;
+    position:absolute;
+    top: 20%;
     left: 0%;
     transform: translateX(100%);
     transition: all 0.5s ease-in-out;
@@ -399,7 +401,9 @@
     display: grid;
     grid-gap: 2rem;
     padding-top: 5rem;
-    grid-template-columns: repeat(3, 10rem);
+    /* width: 100%; */
+    margin: 0px auto;
+    grid-template-columns: repeat(3, 11rem);
     grid-template-rows: repeat(1,auto);
     background: linear-gradient(
       0deg,
@@ -417,7 +421,7 @@
  
   /* Startup India Dropdown */
   .dropdown-menu.startup-india {
-    top: 0% !important;
+    top: 10% !important;
 left: 20%;    background: linear-gradient(
       0deg,
       rgba(251, 248, 248, 1) 0%,
